@@ -52,3 +52,12 @@ class BanglaDictionary:
             return self.data.loc[self.data["word"] == word, "source"].iloc[0]
         except IndexError:
             return "Source not found in the dictionary."
+
+
+
+
+# testing
+
+# test = BanglaDictionary()
+# test.get_meaning("অক্ষিপুট")
+# test.get_ipa("অক্ষিপুট")
