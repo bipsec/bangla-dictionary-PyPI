@@ -1,0 +1,8 @@
+# Ignore Excel files
+*.xlsx
+
+# Ignore CSV files
+*.csv
+
+# Ignore Jupyter Notebook files
+*.ipynb
