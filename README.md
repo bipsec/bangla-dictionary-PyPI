@@ -13,7 +13,7 @@ Here's an example of how to use the BanglaDictionary package:
 
 ```python
 from BanglaDictionary import BanglaDictionary
-```
+
 
 # Create an instance of the BanglaDictionary
 bd = BanglaDictionary()
@@ -41,8 +41,8 @@ print(word_type)  # Output: "Personal Pronoun"
 # Get the source of a word
 source = bd.get_source("আমি")
 print(source)  # Output: "Modern Bengali Dictionary"
-
-
+```
+```
 # Get multiple meanings
 meanings = bd.get_multiple_meanings("আমি", "খেলা", "বই")
 print(meanings)  # Output: {"আমি": "I", "খেলা": "Game", "বই": "Book"}
@@ -66,7 +66,7 @@ print(types)  # Output: {"আমি": "Personal Pronoun", "খেলা": "Commo
 # Get multiple sources
 sources = bd.get_multiple_sources("আমি", "খেলা", "বই")
 print(sources)  # Output: {"আমি": "Modern Bengali Dictionary", "খেলা": "Online Bangla Dictionary", "বই": "Wiktionary"}
-
+```
 
 ## Data Source
 
