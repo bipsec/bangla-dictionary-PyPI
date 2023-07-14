@@ -6,3 +6,6 @@
 
 # Ignore Jupyter Notebook files
 *.ipynb
+
+# ignoring newly written pickle file
+dict.pickle
