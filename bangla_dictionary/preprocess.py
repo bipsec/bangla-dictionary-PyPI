@@ -1,7 +1,6 @@
 import pandas as pd
 
 
-
 def rename_columns(filename, new_column_names):
     try:
         # Read the Excel file
