@@ -7,6 +7,6 @@ setup(
     author="Biplab, Afrar, Shusmit",
     packages=['word_dictionary'],
     package_data={'word_dictionary': ['data/dictionary.pkl']},
-    install_requires=['pandas'],
+    install_requires=['pandas','openpyxl'],
     zip=False,
 )
