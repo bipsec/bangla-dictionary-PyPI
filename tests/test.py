@@ -2,16 +2,16 @@ import os
 import pandas as pd
 
 
-from preprocess import rename_columns
-from write_pickle import write_to_pickle
-from read_pickle import get_dict
+from bangla_dictionary.script.preprocess import rename_columns
+from bangla_dictionary.script.write_pickle import write_to_pickle
+from bangla_dictionary.script.read_pickle import get_dict
 from bangla_dictionary import BanglaDictionary
 
 
 # read the xlsx file and convert it to pickle data
 
 def do():
-    filename = os.path.join("path/to/xlsx")
+    filename = os.path.join("../data/demo_data.xlsx")
     new_column_names = ["pageNo", "word", "spelling", "pronunciation", "meaning",
                     "pos", "IPA [B]", "language", "class", "sentence", "source"]
 
@@ -19,7 +19,7 @@ def do():
 
     df = pd.DataFrame(dataframe)
 
-    df.to_pickle("dict_pkl")
+    # df.to_pickle("../data/dict_pkl")
 
 
 def read_or_write_pickel():
@@ -34,8 +34,8 @@ def testing():
     print(meaning)
 
 if __name__ == "__main__":
-    # do()
+    do()
     # read_or_write_pickel()
     
     # for testing 
-    testing() 
+    # testing()

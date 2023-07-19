@@ -16,7 +16,7 @@ def rename_columns(filename, new_column_names):
         # Rename the columns
         df.columns = new_column_names
 
-        return df
+        return df.to_csv('../../data/demo_data.csv')
 
     except Exception as e:
         print(f"Error occurred while renaming columns: {e}")
