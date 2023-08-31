@@ -1,21 +1,37 @@
-import read_pickle
+# import read_pickle
+import json
+
+import pandas as pd
+
+from .read_pickle import get_dict
 
 
 class BanglaDictionary:
     def __init__(self):
-        self.data = read_pickle.get_dict()
+        self.data = get_dict()
 
     def get_meaning(self, word):
         try:
-            return self.data.loc[self.data["word"] == word, "meaning"].iloc[0]
+            word_data = self.data.loc[self.data["word"] == word, ["number", "meaning"]]
+            if word_data.empty:
+                return json.dumps({"Word not found in the dictionary."}, ensure_ascii=False)
+
+            word_dict = {}
+            for _, row in word_data.iterrows():
+                number = row["number"]
+                meaning = row["meaning"]
+                if number not in word_dict:
+                    word_dict[number] = []
+                word_dict[number].append(meaning)
+
+            return json.dumps(word_dict, ensure_ascii=False)
         except IndexError:
             return "Word not found in the dictionary."
 
-    
     def get_multiple_meanings(self, *words):
         if len(words) == 1:
             return self.get_meaning(words[0])
-        
+
         meanings = {}
 
         for word in words:
@@ -27,21 +43,19 @@ class BanglaDictionary:
 
         return meanings
 
-
-
     def get_ipa(self, word):
         try:
             return self.data.loc[self.data["word"] == word, "IPA [B]"].iloc[0]
         except IndexError:
             return "IPA not found in the dictionary."
-    
+
     def get_multiple_ipa(self, *words):
         if len(words) == 1:
             try:
                 return self.get_ipa(words[0])
             except IndexError:
                 return "IPA not found in the dictionary."
-        
+
         ipas = {}
 
         for word in words:
@@ -53,20 +67,19 @@ class BanglaDictionary:
 
         return ipas
 
-
     def get_root_lang(self, word):
         try:
             return self.data.loc[self.data["word"] == word, "language"].iloc[0]
         except IndexError:
             return "Root Language not found in the dictionary."
-        
+
     def get_multiple_root_lang(self, *words):
         if len(words) == 1:
             try:
                 return self.get_root_lang(words[0])
             except IndexError:
                 return "Root Language not found in the dictionary."
-        
+
         root_langs = {}
 
         for word in words:
@@ -78,20 +91,19 @@ class BanglaDictionary:
 
         return root_langs
 
-
     def get_pronunciation(self, word):
         try:
             return self.data.loc[self.data["word"] == word, "pronunciation"].iloc[0]
         except IndexError:
             return "Pronunciation not found in the dictionary."
-    
+
     def get_multiple_pronunciations(self, *words):
         if len(words) == 1:
             try:
                 return self.get_pronunciation(words[0])
             except IndexError:
                 return "Pronunciation not found in the dictionary."
-        
+
         pronunciations = {}
 
         for word in words:
@@ -103,13 +115,11 @@ class BanglaDictionary:
 
         return pronunciations
 
-
     def get_example(self, word):
         try:
             return self.data.loc[self.data["word"] == word, "sentence"].iloc[0]
         except IndexError:
             return "Example not found in the dictionary."
-        
 
     def get_multiple_examples(self, *words):
         if len(words) == 1:
@@ -134,7 +144,7 @@ class BanglaDictionary:
             return self.data.loc[self.data["word"] == word, "pos"].iloc[0]
         except IndexError:
             return "POS not found in the dictionary."
-    
+
     def get_multiple_pos(self, *words):
         if len(words) == 1:
             try:
@@ -158,7 +168,7 @@ class BanglaDictionary:
             return self.data.loc[self.data["word"] == word, "class"].iloc[0]
         except IndexError:
             return "Type not found in the dictionary."
-    
+
     def get_multiple_types(self, *words):
         if len(words) == 1:
             try:
@@ -182,7 +192,7 @@ class BanglaDictionary:
             return self.data.loc[self.data["word"] == word, "source"].iloc[0]
         except IndexError:
             return "Source not found in the dictionary."
-        
+
     def get_multiple_sources(self, *words):
         if len(words) == 1:
             try:
@@ -200,9 +210,6 @@ class BanglaDictionary:
                 sources[word] = "Source not found in the dictionary."
 
         return sources
-
-
-
 
 # testing
 

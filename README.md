@@ -12,6 +12,9 @@ You can install the BanglaDictionary package using pip:
 
 - [File Structure](#file-structure)
   - [bangla_dictionary](#bangla_dictionary)
+    - [data](#data)
+      - [demo_data.xlsx](#demo_data.xlsx)
+      - [dict_pkl](#dict_pkl)
     - [script](#script)
       - [__init__.py](#__init__.py)
       - [bangla_dictionary.py](#bangla_dictionary.py)
@@ -21,16 +24,13 @@ You can install the BanglaDictionary package using pip:
       - [words.py](#words.py)
     - [tools](#tools)
       - [words.txt](#words.txt)
-    - [data](#data)
-      - [demo_data.xlsx](#demo_data.xlsx)
-      - [dict_pkl](#dict_pkl)
-  - [tests](#tests)
-    - [test.py](#test.py)
-  - [README.md](#README.md)
+    - [__init__.py](#__init__.py)
   - [.gitignore](#gitignore)
+  - [bangla_dict.ipynb](#bangla_dict.ipynb)
   - [LICENSE](#LICENSE)
+  - [README.md](#README.md)
   - [setup.py](#setup.py)
-  - 
+  - [test.py](#test.py)
 ## Usage
 
 Here's an example of how to use the BanglaDictionary package:
@@ -66,8 +66,6 @@ print(source)  # Output: "ব্যবহারিক বাংলা অভি�
 
 ```
 
-
-
 ```python
 # Get multiple meanings
 meanings = bd.get_multiple_meanings("অংশভাগী", "অংশল", "অংশহারী")
@@ -97,7 +95,7 @@ print(sources)  # Output: {"অকরোটি": "ব্যবহারিক �
 
 ## Data Source
 
-The data used by the BanglaDictionary package is sourced from Bangla Dictionary: Bangla Academy- ব্যবহারিক বাংলা অভিধান . The dictionary provides meanings, pronunciations, examples, parts of speech, types, and sources for a wide range of Bengali words.
+The data used by the BanglaDictionary package is sourced from Bangla Dictionary: Bangla Academy- ব্যবহারিক বাংলা অভিধান. The dictionary provides meanings, pronunciations, examples, parts of speech, types, and sources for a wide range of Bengali words.
 
 ## Contributing
 If you find any issues or would like to contribute to the BanglaDictionary package, please feel free to open an issue or submit a pull request on the GitHub repository. You can contact via email: [bip.sec22@gmail.com](#bip.sec22@gmail.com) , [afrarjahin@gmail.com](#afrarjahin@gmail.com)

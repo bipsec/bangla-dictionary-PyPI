@@ -3,7 +3,7 @@ import pandas as pd
 
 def extract_word_to_txt(input_file, output_file, column_name):
     # Read the CSV file
-    df = pd.read_excel(input_file)
+    df = pd.read_csv(input_file)
 
     # Extract the desired column
     column_values = df[column_name]
@@ -21,8 +21,8 @@ def extract_word_to_txt(input_file, output_file, column_name):
 
 # testing
 
-input_file = "../../data/demo_data.xlsx"
-output_file = "../tools/words.txt"
+input_file = "bangla_dictionary/data/demo_data.csv"
+output_file = "bangla_dictionary/tools/words.txt"
 column_name = "word"
 
 extract_word_to_txt(input_file, output_file, column_name)
