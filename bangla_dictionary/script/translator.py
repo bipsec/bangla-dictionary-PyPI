@@ -12,9 +12,7 @@ def translate_bengali_to_english(bengali_words):
 
     return translations
 
-
-# bengali_words = input("Enter Bengali words separated by commas: ").split(',')
-# bengali_words = [word.strip() for word in bengali_words]
+# Example Usage
 
 # res = {
 #     "custom_output": "This is a basic translator.",
@@ -22,10 +20,6 @@ def translate_bengali_to_english(bengali_words):
 #     "other_data": translate_bengali_to_english(["অই", "অক্ষিলোম", "অক্ষিপটল", "অংশ"])
 # }
 #
-# # translations = translate_bengali_to_english(["অই", "অক্ষিলোম", "অক্ষিপটল", "অংশ"])
-#
 # response = json.dumps(res, ensure_ascii=False, indent=4)
 # print(response)
 
-# english_translation = translate_bengali_to_english("অংশ")
-# print(f"English translation: {english_translation}")

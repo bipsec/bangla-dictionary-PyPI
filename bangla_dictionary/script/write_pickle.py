@@ -1,6 +1,7 @@
 import pickle
 import pathlib
 
+
 def write_to_pickle():
     parent_path = pathlib.Path(__file__).absolute().parents[1] / "data"
     bangla_dict = {}
