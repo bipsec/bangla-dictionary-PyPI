@@ -12,17 +12,20 @@ def extract_word_to_txt(input_file, output_file, column_name):
     column_values = column_values.dropna()
 
     column_values = column_values.str.strip()
-
+    count = 0
     # Save the values to a text file
     with open(output_file, 'w') as file:
         for value in column_values:
+            count += 1
             file.write(str(value) + '\n')
+
+    print("Total Words", count)
 
 
 # testing
 
-input_file = "bangla_dictionary/data/demo_data.csv"
-output_file = "bangla_dictionary/tools/words.txt"
-column_name = "word"
-
-extract_word_to_txt(input_file, output_file, column_name)
+# input_file = "./../data/demo_data.csv"
+# output_file = "./../tools/words.txt"
+# column_name = "word"
+#
+# extract_word_to_txt(input_file, output_file, column_name)

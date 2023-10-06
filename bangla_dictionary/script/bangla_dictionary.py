@@ -1,13 +1,17 @@
 # import read_pickle
 import json
-
+import pathlib
 import pandas as pd
 
+from .ipa import BanglaIPATranslator
 from .read_pickle import get_dict
+
+parent_path = pathlib.Path(__file__).absolute().parents[1] / "model"/"ipa_model.pth"
 
 
 class BanglaDictionary:
     def __init__(self):
+        self.model_path = parent_path
         self.data = get_dict()
 
     def get_meaning(self, word):
@@ -45,16 +49,21 @@ class BanglaDictionary:
 
     def get_ipa(self, word):
         try:
-            return self.data.loc[self.data["word"] == word, "IPA [B]"].iloc[0]
+            ipa = BanglaIPATranslator(self.model_path)
+
+            ipa_translated = ipa.translate(word)
+
+            # print(ipa_translated)
+            return ipa_translated
         except IndexError:
-            return "IPA not found in the dictionary."
+            return "IPA is not generated from the model"
 
     def get_multiple_ipa(self, *words):
         if len(words) == 1:
             try:
                 return self.get_ipa(words[0])
             except IndexError:
-                return "IPA not found in the dictionary."
+                return "IPA is not generated from the model"
 
         ipas = {}
 
@@ -63,7 +72,7 @@ class BanglaDictionary:
                 ipa = self.get_ipa(word)
                 ipas[word] = ipa
             except IndexError:
-                ipas[word] = "IPA not found in the dictionary."
+                ipas[word] = "IPA is not generated from the model"
 
         return ipas
 
