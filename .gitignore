@@ -11,3 +11,6 @@
 dict.pickle
 todo.txt
 words.txt
+
+.idea
+__pycache__
