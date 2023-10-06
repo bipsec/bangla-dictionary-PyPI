@@ -33,13 +33,12 @@ def do():
     filename = os.path.join("bangla_dictionary/data/bang_dict.xlsx")
 
     dataframe = pd.read_excel(filename)
-    # print(dataframe.columns)
-    # dataframe.drop(['Unnamed: 0'], axis=1, inplace=True)
+    dataframe.drop(['Unnamed: 0'], axis=1, inplace=True)
 
-    # new_column_names = ["pageNo", "word", "number", "pronunciation", "pos",
-    #                     "meaning", "language", "class", "sentence", "source","IPA", "Audio"]
+    new_column_names = ["pageNo", "word", "number", "pronunciation", "pos", "IPA",
+                        "meaning", "language", "class", "sentence", "source"]
 
-    # dataframe.columns = new_column_names
+    dataframe.columns = new_column_names
     df = fill_null_with_previous_word(df=dataframe)
     df.to_csv("bangla_dictionary/data/bangla_dictionary.csv", index=False)
     df.to_pickle("bangla_dictionary/data/bangla_dictionary_pkl")
@@ -165,7 +164,7 @@ if __name__ == "__main__":
     
     """
     # preprocess the dataset and write csv as well as pickle file
-    # do()
+    do()
 
     # output checking after do function
     # data = pd.read_csv("path/to/bangla_dictionary.csv")
@@ -176,7 +175,7 @@ if __name__ == "__main__":
     # read_or_write_pickle()
 
     # module testing
-    testing()
+    # testing()
 
     # translates into english using google translator
     # translator()
@@ -186,5 +185,5 @@ if __name__ == "__main__":
 
     # all word to a text file of column ["word"]
     # input_dir = "bangla_dictionary/data/bangla_dictionary.csv"
-    # output_dir = "bangla_dictionary/tools/banglaWords2.txt"
+    # output_dir = "bangla_dictionary/tools/banglaWords.txt"
     # extract_word_to_txt(input_file=input_dir, output_file=output_dir, column_name="word")
