@@ -2,7 +2,7 @@
 import pathlib
 import pickle
 
-pickle_path = pathlib.Path(__file__).absolute().parents[1] / "data" / "dict_pkl"
+pickle_path = pathlib.Path(__file__).absolute().parents[1] / "data" / "bangla_dictionary_pkl"
 
 
 def get_dict() -> dict:
