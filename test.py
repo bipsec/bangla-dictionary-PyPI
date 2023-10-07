@@ -138,6 +138,7 @@ def translator():
     print(response)
 
 
+# demo checking with ipa from the model
 def ipa_checker(word):
     path = "bangla_dictionary/model/ipa_model.pth"
 
@@ -148,25 +149,25 @@ def ipa_checker(word):
     print(ipa_translated)
 
 
-# Steps to be followed:
-#
-#   1. First use the do function to preprocess the xlsx file - it will rename columns and write a csv file and
-#      pickle file data
-#   2. Secondly, you can use read_or_write_pickle function to read or write pickle file separately [Optional]
-#   3. Then testing function will be used to check the pypi module.
-#   4. User also can check translator function to translate bangla list of words into english
-
-
 if __name__ == "__main__":
     """
     Here all the functions are commented because each of the functions do individual tasks. 
     So while needed just uncomment them before using.
     
+    Steps:
+        - First use the do function to preprocess the xlsx file - it will rename columns and write a csv file and
+            pickle file data
+        - Secondly, you can use read_or_write_pickle function to read or write pickle file separately [Optional]
+        - Then testing function will be used to check the pypi module.
+        - User also can check translator function to translate bangla list of words into english
+    Returns:
+        - Comment out to see the outputs.
     """
-    # preprocess the dataset and write csv as well as pickle file
-    do()
 
-    # output checking after do function
+    # preprocess the dataset and write csv as well as pickle file
+    # do()
+
+    # output checking after do function ( mone boro sondeho - kaj korbe ki na -_-)
     # data = pd.read_csv("path/to/bangla_dictionary.csv")
     # print(data.shape)
     # print(data.columns)
@@ -177,13 +178,13 @@ if __name__ == "__main__":
     # module testing
     # testing()
 
-    # translates into english using google translator
+    # translates into english using google translator [Optional]
     # translator()
 
     # checking with ipa
     # ipa_checker("চাষাবাদ")
 
     # all word to a text file of column ["word"]
-    # input_dir = "bangla_dictionary/data/bangla_dictionary.csv"
-    # output_dir = "bangla_dictionary/tools/banglaWords.txt"
+    # input_dir = "path/to/bangla_dictionary.csv"
+    # output_dir = "path/to/output"
     # extract_word_to_txt(input_file=input_dir, output_file=output_dir, column_name="word")

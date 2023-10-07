@@ -14,3 +14,4 @@ words.txt
 
 .idea
 __pycache__
+/data/

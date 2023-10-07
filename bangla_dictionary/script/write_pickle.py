@@ -3,6 +3,11 @@ import pathlib
 
 
 def write_to_pickle():
+    """
+        Eida hudai likhsi, eidar kono kam nai....
+    :return:
+        - pickle file return kore...
+    """
     parent_path = pathlib.Path(__file__).absolute().parents[1] / "data"
     bangla_dict = {}
 

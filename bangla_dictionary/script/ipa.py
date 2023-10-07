@@ -37,6 +37,21 @@ TARGET = data.Field(tokenize=myTokenizerIPA, batch_first=False, tokenizer_langua
 
 
 class DataFrameDataset(data.Dataset):
+    """
+        This code belongs to Asif Sushmit
+
+        Preface:
+        - to point out one thing about the transformer what it could do is to enable
+            training on the whole sequence at once but on really using it for translation it predicts the next word
+            then it feeds the prediction into the sequence again until the model predict <eos> token (with a max length ofc)
+        - I'm using adagrad because it assigns bigger updates to less frequently updated weights. so thought it could be useful for words not used a lot
+        - ?????????? - HOPE VAI WILL ADD MORE.
+        - ????????? - HOPE VAI WILL ADD MORE.
+        - ???????? - HOPE VAI WILL ADD MORE.
+
+        Returns:
+        - translation to ipa from bangla words
+    """
 
     def __init__(self, df, src_field, target_field, is_test=False, **kwargs):
         fields = [('ban', src_field), ('ipa', target_field)]
@@ -182,7 +197,7 @@ class BanglaIPATranslator:
         return " ".join([word for word in trg if word != "<unk>"][1:-1])
 
 
-# # Usage Example:
+# Usage Example:
 #
 # model_path = "../translation_model.pth"
 #

@@ -1,8 +1,15 @@
 from googletrans import Translator
-import json
 
 
 def translate_bengali_to_english(bengali_words):
+    """
+        One day I will make this translator, till then use Google Translator - (Chapa)
+    Params:
+        - input one bengali word - translator er jodi common pore translate kore dibe.
+        - don't keep any hope, it translates bal sal.
+    Returns:
+        - shit...
+    """
     translator = Translator()
     translations = {}
 
@@ -19,7 +26,6 @@ def translate_bengali_to_english(bengali_words):
 #     "google_translator_message": "Using Google Translator",
 #     "other_data": translate_bengali_to_english(["অই", "অক্ষিলোম", "অক্ষিপটল", "অংশ"])
 # }
-#
 # response = json.dumps(res, ensure_ascii=False, indent=4)
 # print(response)
 

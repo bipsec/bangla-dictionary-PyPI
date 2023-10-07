@@ -1,15 +1,31 @@
-# import read_pickle
+# import modules
+
 import json
 import pathlib
-import pandas as pd
 
 from .ipa import BanglaIPATranslator
 from .read_pickle import get_dict
 
+# data path for model
 parent_path = pathlib.Path(__file__).absolute().parents[1] / "model"/"ipa_model.pth"
 
 
 class BanglaDictionary:
+    """
+        This class is responsible for all the outputs not the people behind this.
+
+        In short:
+        - Ask for meaning of a word or multiple words, it works fine.
+        - Ask for ipa of a word or multiple words, it works fine.
+        - Ask for sentence example of a word or multiple words, it shows example of that word based on availability. Still populating..
+        - Ask for root lang of a word or multiple words, it works fine if the root of that word is tagged on the dictionary.
+        - Ask for topic model of a word or multiple words, it will work fine in future updates. xD
+        - Ask for .... ( why are you so needy, stop asking....)
+
+        Returns:
+        - For different inputs it gives the desired result taken from Bangla Dictionary
+    """
+
     def __init__(self):
         self.model_path = parent_path
         self.data = get_dict()

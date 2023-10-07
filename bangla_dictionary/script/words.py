@@ -2,18 +2,23 @@ import pandas as pd
 
 
 def extract_word_to_txt(input_file, output_file, column_name):
-    # Read the CSV file
+    """
+        This code blocks writes the all words in a txt file for some important reasons,jeta bola jabe na.
+    :Parameters:
+        - input path of csv data
+        - output file path for writing the txt file ( kutay rakhte chan)
+        - oh! which col you want to write into a txt file.
+    Returns:
+        - xtx file (xD)
+    """
     df = pd.read_csv(input_file)
 
-    # Extract the desired column
     column_values = df[column_name]
-
-    # Remove NaN values
     column_values = column_values.dropna()
 
     column_values = column_values.str.strip()
     count = 0
-    # Save the values to a text file
+
     with open(output_file, 'w') as file:
         for value in column_values:
             count += 1
