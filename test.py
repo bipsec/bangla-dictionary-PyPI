@@ -33,12 +33,13 @@ def do():
     filename = os.path.join("bangla_dictionary/data/bang_dict.xlsx")
 
     dataframe = pd.read_excel(filename)
+    # print(dataframe.columns)
     dataframe.drop(['Unnamed: 0'], axis=1, inplace=True)
-
-    new_column_names = ["pageNo", "word", "number", "pronunciation", "pos", "IPA",
-                        "meaning", "language", "class", "sentence", "source"]
-
-    dataframe.columns = new_column_names
+    #
+    # new_column_names = ["pageNo", "word", "number", "pronunciation", "pos", "IPA",
+    #                     "meaning", "language", "class", "sentence", "source"]
+    #
+    # dataframe.columns = new_column_names
     df = fill_null_with_previous_word(df=dataframe)
     df.to_csv("bangla_dictionary/data/bangla_dictionary.csv", index=False)
     df.to_pickle("bangla_dictionary/data/bangla_dictionary_pkl")

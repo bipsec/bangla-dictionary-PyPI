@@ -194,7 +194,7 @@ class BanglaIPATranslator:
             trg.append(predicted_word)
             if predicted_word == "<eos>":
                 break
-        return " ".join([word for word in trg if word != "<unk>"][1:-1])
+        return "".join([word for word in trg if word != "<unk>"][1:-1])
 
 
 # Usage Example:
