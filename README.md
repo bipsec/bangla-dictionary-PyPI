@@ -7,7 +7,7 @@ BanglaDictionary is a Python package that provides a dictionary for the Bengali 
 You can install the BanglaDictionary package using pip:
 
 ```python
-
+pip install bangladict
 ```
 
 - [File Structure](#file-structure)
