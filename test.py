@@ -183,7 +183,7 @@ if __name__ == "__main__":
     # translator()
 
     # checking with ipa
-    # ipa_checker("শব্দ")
+    # ipa_checker("চাষাবাদ")
 
     # all word to a text file of column ["word"]
     # input_dir = "path/to/bangla_dictionary.csv"
