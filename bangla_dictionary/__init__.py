@@ -1,0 +1,1 @@
+from bangla_dictionary.script import BanglaDictionary
