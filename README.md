@@ -7,7 +7,7 @@ BanglaDictionary is a Python package that provides a dictionary for the Bengali 
 You can install the BanglaDictionary package using pip:
 
 ```python
-
+pip install bangladict
 ```
 
 - [File Structure](#file-structure)
@@ -98,7 +98,7 @@ print(sources)  # Output: {"অকরোটি": "ব্যবহারিক �
 The data used by the BanglaDictionary package is sourced from Bangla Dictionary: Bangla Academy- ব্যবহারিক বাংলা অভিধান. The dictionary provides meanings, pronunciations, examples, parts of speech, types, and sources for a wide range of Bengali words.
 
 ## Contributing
-If you find any issues or would like to contribute to the BanglaDictionary package, please feel free to open an issue or submit a pull request on the GitHub repository. You can contact via email: [bip.sec22@gmail.com](#bip.sec22@gmail.com) , [afrarjahin@gmail.com](#afrarjahin@gmail.com)
+If you find any issues or would like to contribute to the BanglaDictionary package, please feel free to open an issue or submit a pull request on the GitHub repository. Feel free to create issues to contact.
 
 
 ## License
