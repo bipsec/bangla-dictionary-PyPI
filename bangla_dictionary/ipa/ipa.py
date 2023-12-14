@@ -5,7 +5,7 @@ from torch import nn
 from torchtext import data
 import random
 
-ipa_voacab = pathlib.Path(__file__).absolute().parents[2] / "data" / "sushmitIPAData.csv"
+ipa_voacab = pathlib.Path(__file__).absolute().parents[2] / "data" / "ipa_vocab_data.csv"
 
 
 if torch.cuda.is_available():

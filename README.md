@@ -1,6 +1,7 @@
 # BanglaDictionary
 
 BanglaDictionary is a Python package that provides a dictionary for the Bengali (Bangla) language. It allows you to retrieve meanings, pronunciations, examples, parts of speech, types, and sources of words in the Bengali language.
+Also it is a package that allows to build dictionary from Bangla and all other contents from a Bangla dictionary. It allows user how to create online dictionary from scratch and use it to other language'
 
 ## Installation
 
@@ -10,34 +11,63 @@ You can install the BanglaDictionary package using pip:
 pip install bangladict
 ```
 
-- [File Structure](#file-structure)
-  - [bangla_dictionary](#bangla_dictionary)
-    - [data](#data)
-      - [demo_data.xlsx](#demo_data.xlsx)
-      - [dict_pkl](#dict_pkl)
-    - [script](#script)
-      - [__init__.py](#__init__.py)
-      - [bangla_dictionary.py](#bangla_dictionary.py)
-      - [preprocess.py](#preprocess.py)
-      - [read_pickle](#read_pickle)
-      - [write_pickle](#write_pickle)
-      - [words.py](#words.py)
-    - [tools](#tools)
-      - [words.txt](#words.txt)
-    - [__init__.py](#__init__.py)
-  - [.gitignore](#gitignore)
-  - [bangla_dict.ipynb](#bangla_dict.ipynb)
-  - [LICENSE](#LICENSE)
-  - [README.md](#README.md)
-  - [setup.py](#setup.py)
-  - [test.py](#test.py)
+## File Structure
+```sh
+bangla_dictionary/
+├── bangla_dictionary/
+│   ├── dictionary/
+│   │   ├── __init__.py
+│   │   ├── bangla_dictionary.py
+│   ├── ipa/
+│   │   ├── __init__.py
+│   │   ├── ipa.py
+│   ├── __init__.py
+│   │
+│   ├── model/
+│   │   ├── ipa_model.pth
+│   ├── data/
+│   │   ├── bangla_dictionary_pkl
+│   │   ├── ipa_vocab_data
+│   ├── model/
+│   │   ├── __init__.py
+│   │   ├── database.py
+│   │   └── session.py
+│   ├── scripts/
+│   │   ├── preprocess.py
+│   │   ├── read_pickle.py
+│   │   ├── translator.py
+│   │   ├── translator_module.py
+│   │   ├── words.py
+│   │   ├── write_pickle.py
+│   ├── tests/
+│   │   ├── __init__.py
+│   │   ├── test_bangla_ipa.py
+│   │   ├── test_config.py
+│   │   ├── test_dict.py
+│   │   ├── test_runner.py
+│   │   ├── test_suite.py
+│   │   ├── test_translator.py
+├── word_details/
+│   ├── banglaWords.txt
+├── __init__.py
+├── .gitignore
+├── LICENSE
+├── setup.py
+├── README.md
+└── requirements.txt
+├── todo.txt
+```
+
+
+
+
 ## Usage
 
 Here's an example of how to use the BanglaDictionary package:
 
 ```python
 # Create an instance of the BanglaDictionary
-from BanglaDictionary import BanglaDictionary
+from bangla_dictionary.dictionary.bangla_dictionary import BanglaDictionary
 bd = BanglaDictionary()
 
 # Get the meaning of a word
