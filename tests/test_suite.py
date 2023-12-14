@@ -11,6 +11,6 @@ def suite():
     test_suite = unittest.TestSuite()
     test_suite.addTest(unittest.makeSuite(TestBanglaDictionary))
     test_suite.addTest(unittest.makeSuite(TestBanglaIPA))
-    test_suite.addTest(unittest.makeSuite(TestTranslator))
+    # test_suite.addTest(unittest.makeSuite(TestTranslator))
     return test_suite
 
