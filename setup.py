@@ -17,7 +17,7 @@ with codecs.open(os.path.join(here, "README.md"), encoding="utf-8") as fh:
 # Setting up
 setup(
     name='bangla_dictionary',
-    version='0.0.1',
+    version='0.0.2',
     author="Biplab Kumar Sarkar, Afrar Jahin, Asif Shusmit",
     author_email="bip.sec22@gmail.com, afarjahin@gmail.com",
     description="A Complete Bangla Dictionary PyPI Module.",
@@ -30,7 +30,7 @@ setup(
     install_requires=requirements,
     keywords=['python', 'online dictionary', 'bangla dictionary', 'bengali dictionary', 'bangla_dict', 'corpus dictionary', 'bangla corpus'],
     classifiers=[
-        "Development Status :: Corpus Building",
+        "Development Status :: 1 - Planning",
         "Intended Audience :: Developers",
         "Programming Language :: Python :: 3",
         "Operating System :: Unix",
