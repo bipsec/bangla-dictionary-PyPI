@@ -1,14 +1,14 @@
 # BanglaDictionary
 
 BanglaDictionary is a Python package that provides a dictionary for the Bengali (Bangla) language. It allows you to retrieve meanings, pronunciations, examples, parts of speech, types, and sources of words in the Bengali language.
-Also it is a package that allows to build dictionary from Bangla and all other contents from a Bangla dictionary. It allows user how to create online dictionary from scratch and use it to other language'
+Also It is a package that allows to build dictionary from Bangla and all other contents from a Bangla dictionary. It allows user how to create online dictionary from scratch and use it to other language'
 
 ## Installation
 
 You can install the BanglaDictionary package using pip:
 
 ```python
-pip install bangladict
+pip install bangla-dictionary
 ```
 
 ## File Structure
