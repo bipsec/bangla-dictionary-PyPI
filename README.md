@@ -15,38 +15,21 @@ pip install bangla-dictionary
 ```sh
 bangla_dictionary/
 ├── bangla_dictionary/
-│   ├── dictionary/
-│   │   ├── __init__.py
-│   │   ├── dictionary.py
-│   ├── ipa/
-│   │   ├── __init__.py
-│   │   ├── ipa.py
 │   ├── __init__.py
-│   │
-│   ├── model/
-│   │   ├── ipa_model.pth
-│   ├── data/
+│   ├── dictionary.py
+├── data/
 │   │   ├── bangla_dictionary_pkl
-│   │   ├── ipa_vocab_data
-│   ├── model/
-│   │   ├── __init__.py
-│   │   ├── database.py
-│   │   └── session.py
-│   ├── scripts/
+├── scripts/
 │   │   ├── preprocess.py
 │   │   ├── read_pickle.py
-│   │   ├── translator.py
-│   │   ├── translator_module.py
 │   │   ├── words.py
 │   │   ├── write_pickle.py
 │   ├── tests/
 │   │   ├── __init__.py
-│   │   ├── test_bangla_ipa.py
 │   │   ├── test_config.py
 │   │   ├── test_dict.py
 │   │   ├── test_runner.py
 │   │   ├── test_suite.py
-│   │   ├── test_translator.py
 ├── word_details/
 │   ├── banglaWords.txt
 ├── __init__.py
