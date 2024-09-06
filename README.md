@@ -17,7 +17,7 @@ bangla_dictionary/
 ├── bangla_dictionary/
 │   ├── dictionary/
 │   │   ├── __init__.py
-│   │   ├── bangla_dictionary.py
+│   │   ├── dictionary.py
 │   ├── ipa/
 │   │   ├── __init__.py
 │   │   ├── ipa.py
@@ -67,7 +67,7 @@ Here's an example of how to use the BanglaDictionary package:
 
 ```python
 # Create an instance of the BanglaDictionary
-from bangla_dictionary.dictionary.bangla_dictionary import BanglaDictionary
+from bangla_dictionary.dictionary import BanglaDictionary
 bd = BanglaDictionary()
 
 # Get the meaning of a word

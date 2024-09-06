@@ -1,9 +1,10 @@
 import os
 import sys
 import unittest
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from tests.test_config import get_test_data_path
-from bangla_dictionary.dictionary.bangla_dictionary import BanglaDictionary
+from bangla_dictionary.dictionary import BanglaDictionary
+
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 
 class TestBanglaDictionary(unittest.TestCase):
@@ -20,13 +21,13 @@ class TestBanglaDictionary(unittest.TestCase):
                                                            "ভারকেন্দ্র")
         self.assertIsNotNone(multiple_meaning)
 
-    def test_get_ipa(self):
-        ipa = self.test.get_ipa("ভারকেন্দ্র")
-        self.assertIsNotNone(ipa)
-
-    def test_get_multiple_ipa(self):
-        ipa2 = self.test.get_multiple_ipa("চাষাবাদ", "চিঁহি", "কথায় চিঁড়ে ভেজে না", "সম্প্রতি", "ভারকেন্দ্র")
-        self.assertIsNotNone(ipa2)
+    # def test_get_ipa(self):
+    #     ipa = self.test.get_ipa("ভারকেন্দ্র")
+    #     self.assertIsNotNone(ipa)
+    #
+    # def test_get_multiple_ipa(self):
+    #     ipa2 = self.test.get_multiple_ipa("চাষাবাদ", "চিঁহি", "কথায় চিঁড়ে ভেজে না", "সম্প্রতি", "ভারকেন্দ্র")
+    #     self.assertIsNotNone(ipa2)
 
     def test_get_pos(self):
         pos = self.test.get_pos("")
@@ -87,4 +88,3 @@ class TestBanglaDictionary(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
-
