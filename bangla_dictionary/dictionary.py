@@ -1,12 +1,8 @@
 # import modules
 
 import json
-import pathlib
 
 from scripts.read_pickle import get_dict
-
-# data path for model
-parent_path = pathlib.Path(__file__).absolute().parents[2] / "model" / "ipa_model.pth"
 
 
 class BanglaDictionary:
