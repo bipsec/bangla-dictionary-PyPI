@@ -1,7 +1,6 @@
 # import modules
 
 import json
-
 from scripts.read_pickle import get_dict
 
 
@@ -22,7 +21,6 @@ class BanglaDictionary:
     """
 
     def __init__(self):
-        self.model_path = parent_path
         self.data = get_dict()
 
     def get_meaning(self, word):
