@@ -7,7 +7,7 @@ Also It is a package that allows to build dictionary from Bangla and all other c
 
 You can install the BanglaDictionary package using pip:
 
-```python
+```shell
 pip install bangla-dictionary
 ```
 
@@ -81,6 +81,9 @@ print(source)  # Output: "ব্যবহারিক বাংলা অভি�
 
 ```python
 # Get multiple meanings
+from bangla_dictionary.dictionary import BanglaDictionary
+bd = BanglaDictionary()
+
 meanings = bd.get_multiple_meanings("অংশভাগী", "অংশল", "অংশহারী")
 print(meanings)  # Output: {"অংশভাগী": "অংশ পাওয়ার যোগ্য", "অংশল": "বলবান", "অংশহারী": "অংশলোপ"}
 
