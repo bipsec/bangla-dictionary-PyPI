@@ -55,7 +55,7 @@ bd = BanglaDictionary()
 
 # Get the meaning of a word
 meaning = bd.get_meaning("অই")
-print(meaning)  # Output: "পদ্যে ছন্দের নির্দেশক স্বরবর্ণ"
+print(meaning)  # Output: {"২": ["পদ্যে ছন্দের খাতিরে নির্দেশক স্বরবর্ণ 'ঐ' কখনো কখনো 'অই' রুপে ব্যবহৃত হয়", "স্মরণ সম্বোধন ও আক্ষেপাদি সূচক"], "১": ["অদূরে বা সম্মুখবর্তী কোনো কিছু নির্দেশে ", "নির্দিষ্ট", "উল্লিখিত", "সেই"]}
 
 # Get the pronunciation of a word
 pronunciation = bd.get_pronunciation("অংগুষ্ঠানা")
@@ -85,7 +85,7 @@ from bangla_dictionary.dictionary import BanglaDictionary
 bd = BanglaDictionary()
 
 meanings = bd.get_multiple_meanings("অংশভাগী", "অংশল", "অংশহারী")
-print(meanings)  # Output: {"অংশভাগী": "অংশ পাওয়ার যোগ্য", "অংশল": "বলবান", "অংশহারী": "অংশলোপ"}
+print(meanings)  # Output: {'অংশভাগী': '{"১": ["অংশ পাওয়ার যোগ্য", "অংশীদার"]}', 'অংশল': '{"১": ["বলবান", "বলশালী"]}', 'অংশহারী': '{"১": ["অংশলোপ", "অপহরণ করে এমন"], "২": ["অংশগ্রহণকারী"]}'}
 
 # Get multiple pronunciations
 pronunciations = bd.get_multiple_pronunciations("অংশহারী", "অংশাংশ", "অংশানো")
