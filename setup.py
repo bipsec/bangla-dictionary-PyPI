@@ -77,8 +77,8 @@ setup(
     description="A Complete Bangla Dictionary PyPI Module.",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    package_dir={"": "bangla_dictionary"},
-    packages=find_packages(where=['bangla_dictionary', 'bangla_dictionary.*']),
+    package_dir={"": "dictionary"},
+    packages=find_packages(where=['dictionary', 'dictionary.*']),
     url="https://github.com/bipsec/bangla-dictionary",
     license="MIT",
     install_requires=requirements,  # Install dependencies

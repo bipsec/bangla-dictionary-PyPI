@@ -2,7 +2,7 @@ import os
 import sys
 import unittest
 from tests.test_config import get_test_data_path
-from bangla_dictionary.dictionary import BanglaDictionary
+from dictionary.banglaDictionary import BanglaDictionary
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
