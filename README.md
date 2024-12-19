@@ -8,7 +8,7 @@ Also It is a package that allows to build dictionary from Bangla and all other c
 You can install the BanglaDictionary package using pip:
 
 ```shell
-pip install bangla-dictionary
+pip install bangla_dictionary
 ```
 
 ## File Structure
