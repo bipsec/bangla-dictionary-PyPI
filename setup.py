@@ -70,8 +70,8 @@ with codecs.open(os.path.join(here, "README.md"), encoding="utf-8") as fh:
 
 # Setting up the package
 setup(
-    name="bangla-dictionary",
-    version="0.10",
+    name="banglaDictionary",
+    version="0.1",
     author="Biplab Kumar Sarkar, Afrar Jahin, Tanveer Azmal, Asif Shusmit",
     author_email="bip.sec22@gmail.com",
     description="A Complete Bangla Dictionary PyPI Module.",
