@@ -4,10 +4,12 @@ from setuptools import setup, find_packages
 
 import chardet
 
+
 def detect_file_encoding(filename):
     with open(filename, "rb") as f:
         result = chardet.detect(f.read())
     return result
+
 
 encoding_info = detect_file_encoding("requirements.txt")
 print(encoding_info)
@@ -22,8 +24,8 @@ def convert_to_utf8(filename):
         with open(filename, "w", encoding="utf-8") as f:
             f.write(content.decode(encoding))
 
-convert_to_utf8("requirements.txt")
 
+convert_to_utf8("requirements.txt")
 
 
 def parse_requirements_safe(filename):
@@ -34,6 +36,7 @@ def parse_requirements_safe(filename):
             if line and not line.startswith("#"):  # Ignore blank lines and comments
                 requirements.append(line)
         return requirements
+
 
 requirements = parse_requirements_safe("requirements.txt")
 
@@ -67,15 +70,15 @@ with codecs.open(os.path.join(here, "README.md"), encoding="utf-8") as fh:
 
 # Setting up the package
 setup(
-    name="bangla_dictionary",  # Package name on PyPI
-    version="0.0.3",  # Semantic versioning
+    name="bangla_dictionary",
+    version="0.0.5",
     author="Biplab Kumar Sarkar, Afrar Jahin, Tanveer Azmal, Asif Shusmit",
     author_email="bip.sec22@gmail.com",
     description="A Complete Bangla Dictionary PyPI Module.",
     long_description=long_description,
-    long_description_content_type="text/markdown",  # Specify README format
-    package_dir={"": "bangla_dictionary"},  # Root package directory
-    packages=find_packages(where="bangla_dictionary"),  # Automatically find packages
+    long_description_content_type="text/markdown",
+    package_dir={"": "bangla_dictionary"},
+    packages=find_packages(where=['bangla_dictionary', 'bangla_dictionary.*']),
     url="https://github.com/bipsec/bangla-dictionary",
     license="MIT",
     install_requires=requirements,  # Install dependencies

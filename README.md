@@ -42,8 +42,6 @@ bangla_dictionary/
 ```
 
 
-
-
 ## Usage
 
 Here's an example of how to use the BanglaDictionary package:
