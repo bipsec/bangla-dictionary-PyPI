@@ -11,7 +11,9 @@
 dict.pickle
 todo.txt
 words.txt
-
+__pycache__/
+*.py[cod]
+*$py.class
 .idea/
 __pycache__
 /data/
