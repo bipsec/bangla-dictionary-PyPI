@@ -18,18 +18,20 @@ bangla_dictionary/
 │   ├── __init__.py
 │   ├── dictionary.py
 ├── data/
-│   │   ├── bangla_dictionary_pkl
+│   ├── __init__.py
+│   ├── bangla_dictionary_pkl
 ├── scripts/
-│   │   ├── preprocess.py
-│   │   ├── read_pickle.py
-│   │   ├── words.py
-│   │   ├── write_pickle.py
-│   ├── tests/
-│   │   ├── __init__.py
-│   │   ├── test_config.py
-│   │   ├── test_dict.py
-│   │   ├── test_runner.py
-│   │   ├── test_suite.py
+│   ├── __init__.py
+│   ├── preprocess.py
+│   ├── read_pickle.py
+│   ├── words.py
+│   ├── write_pickle.py
+├── tests/
+│   ├── __init__.py
+│   ├── test_config.py
+│   ├── test_dict.py
+│   ├── test_runner.py
+│   ├── test_suite.py
 ├── word_details/
 │   ├── banglaWords.txt
 ├── __init__.py

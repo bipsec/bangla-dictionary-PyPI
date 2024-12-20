@@ -71,14 +71,13 @@ with codecs.open(os.path.join(here, "README.md"), encoding="utf-8") as fh:
 # Setting up the package
 setup(
     name="bangla-dictionary",
-    version="0.3",
+    version="0.4",
     author="Biplab Kumar Sarkar, Afrar Jahin, Tanveer Azmal, Asif Shusmit",
     author_email="bip.sec22@gmail.com",
     description="A Complete Bangla Dictionary PyPI Module.",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    package_dir={"": "bangla_dictionary"},
-    packages=find_packages(where=['bangla_dictionary', 'bangla_dictionary.*']),
+    packages=find_packages(),
     url="https://github.com/bipsec/bangla-dictionary",
     license="MIT",
     install_requires=requirements,
