@@ -12,7 +12,7 @@ class BanglaDictionary:
         - Ask for meaning of a word or multiple words, it works fine.
         - Ask for ipa of a word or multiple words, it works fine.
         - Ask for sentence example of a word or multiple words, it shows example of that word based on availability. Still populating..
-        - Ask for root lang of a word or multiple words, it works fine if the root of that word is tagged on the dictionary.
+        - Ask for root lang of a word or multiple words, it works fine if the root of that word is tagged on the bangla_dictionary.
         - Ask for topic model of a word or multiple words, it will work fine in future updates. xD
         - Ask for .... ( why are you so needy, stop asking....)
 
@@ -27,7 +27,7 @@ class BanglaDictionary:
         try:
             word_data = self.data.loc[self.data["word"] == word, ["number", "meaning"]]
             if word_data.empty:
-                return json.dumps({"Word not found in the dictionary."}, ensure_ascii=False)
+                return json.dumps({"Word not found in the bangla_dictionary."}, ensure_ascii=False)
 
             word_dict = {}
             for _, row in word_data.iterrows():
@@ -39,7 +39,7 @@ class BanglaDictionary:
 
             return json.dumps(word_dict, ensure_ascii=False)
         except IndexError:
-            return "Word not found in the dictionary."
+            return "Word not found in the bangla_dictionary."
 
     def get_multiple_meanings(self, *words):
         if len(words) == 1:
@@ -52,7 +52,7 @@ class BanglaDictionary:
                 meaning = self.get_meaning(word)
                 meanings[word] = meaning
             except IndexError:
-                meanings[word] = "Word not found in the dictionary."
+                meanings[word] = "Word not found in the bangla_dictionary."
 
         return meanings
 
@@ -60,14 +60,14 @@ class BanglaDictionary:
         try:
             return self.data.loc[self.data["word"] == word, "language"].iloc[0]
         except IndexError:
-            return "Root Language not found in the dictionary."
+            return "Root Language not found in the bangla_dictionary."
 
     def get_multiple_root_lang(self, *words):
         if len(words) == 1:
             try:
                 return self.get_root_lang(words[0])
             except IndexError:
-                return "Root Language not found in the dictionary."
+                return "Root Language not found in the bangla_dictionary."
 
         root_langs = {}
 
@@ -76,7 +76,7 @@ class BanglaDictionary:
                 root_lang = self.get_root_lang(word)
                 root_langs[word] = root_lang
             except IndexError:
-                root_langs[word] = "Root Language not found in the dictionary."
+                root_langs[word] = "Root Language not found in the bangla_dictionary."
 
         return root_langs
 
@@ -84,14 +84,14 @@ class BanglaDictionary:
         try:
             return self.data.loc[self.data["word"] == word, "pronunciation"].iloc[0]
         except IndexError:
-            return "Pronunciation not found in the dictionary."
+            return "Pronunciation not found in the bangla_dictionary."
 
     def get_multiple_pronunciations(self, *words):
         if len(words) == 1:
             try:
                 return self.get_pronunciation(words[0])
             except IndexError:
-                return "Pronunciation not found in the dictionary."
+                return "Pronunciation not found in the bangla_dictionary."
 
         pronunciations = {}
 
@@ -100,7 +100,7 @@ class BanglaDictionary:
                 pronunciation = self.get_pronunciation(word)
                 pronunciations[word] = pronunciation
             except IndexError:
-                pronunciations[word] = "Pronunciation not found in the dictionary."
+                pronunciations[word] = "Pronunciation not found in the bangla_dictionary."
 
         return pronunciations
 
@@ -108,14 +108,14 @@ class BanglaDictionary:
         try:
             return self.data.loc[self.data["word"] == word, "sentence"].iloc[0]
         except IndexError:
-            return "Example not found in the dictionary."
+            return "Example not found in the bangla_dictionary."
 
     def get_multiple_examples(self, *words):
         if len(words) == 1:
             try:
                 return self.get_example(words[0])
             except IndexError:
-                return "Example not found in the dictionary."
+                return "Example not found in the bangla_dictionary."
 
         examples = {}
 
@@ -124,7 +124,7 @@ class BanglaDictionary:
                 example = self.get_example(word)
                 examples[word] = example
             except IndexError:
-                examples[word] = "Example not found in the dictionary."
+                examples[word] = "Example not found in the bangla_dictionary."
 
         return examples
 
@@ -132,14 +132,14 @@ class BanglaDictionary:
         try:
             return self.data.loc[self.data["word"] == word, "pos"].iloc[0]
         except IndexError:
-            return "POS not found in the dictionary."
+            return "POS not found in the bangla_dictionary."
 
     def get_multiple_pos(self, *words):
         if len(words) == 1:
             try:
                 return self.get_pos(words[0])
             except IndexError:
-                return "POS not found in the dictionary."
+                return "POS not found in the bangla_dictionary."
 
         pos_list = {}
 
@@ -148,7 +148,7 @@ class BanglaDictionary:
                 pos = self.get_pos(word)
                 pos_list[word] = pos
             except IndexError:
-                pos_list[word] = "POS not found in the dictionary."
+                pos_list[word] = "POS not found in the bangla_dictionary."
 
         return pos_list
 
@@ -156,14 +156,14 @@ class BanglaDictionary:
         try:
             return self.data.loc[self.data["word"] == word, "class"].iloc[0]
         except IndexError:
-            return "Type not found in the dictionary."
+            return "Type not found in the bangla_dictionary."
 
     def get_multiple_types(self, *words):
         if len(words) == 1:
             try:
                 return self.get_type(words[0])
             except IndexError:
-                return "Type not found in the dictionary."
+                return "Type not found in the bangla_dictionary."
 
         types = {}
 
@@ -172,7 +172,7 @@ class BanglaDictionary:
                 word_type = self.get_type(word)
                 types[word] = word_type
             except IndexError:
-                types[word] = "Type not found in the dictionary."
+                types[word] = "Type not found in the bangla_dictionary."
 
         return types
 
@@ -180,14 +180,14 @@ class BanglaDictionary:
         try:
             return self.data.loc[self.data["word"] == word, "source"].iloc[0]
         except IndexError:
-            return "Source not found in the dictionary."
+            return "Source not found in the bangla_dictionary."
 
     def get_multiple_sources(self, *words):
         if len(words) == 1:
             try:
                 return self.get_source(words[0])
             except IndexError:
-                return "Source not found in the dictionary."
+                return "Source not found in the bangla_dictionary."
 
         sources = {}
 
@@ -196,6 +196,6 @@ class BanglaDictionary:
                 source = self.get_source(word)
                 sources[word] = source
             except IndexError:
-                sources[word] = "Source not found in the dictionary."
+                sources[word] = "Source not found in the bangla_dictionary."
 
         return sources

@@ -1,22 +1,22 @@
 # BanglaDictionary
 
 BanglaDictionary is a Python package that provides a dictionary for the Bengali (Bangla) language. It allows you to retrieve meanings, pronunciations, examples, parts of speech, types, and sources of words in the Bengali language.
-Also It is a package that allows to build dictionary from Bangla and all other contents from a Bangla dictionary. It allows user how to create online dictionary from scratch and use it to other language'
+Also, It is a package that allows to build dictionary from Bangla and all other contents from a Bangla dictionary. It allows user how to create online dictionary from scratch and use it to other language'
 
 ## Installation
 
 You can install the BanglaDictionary package using pip:
 
 ```shell
-pip install banglaDictionary
+pip install bangla-dictionary
 ```
 
 ## File Structure
 ```sh
-dictionary/
-├── dictionary/
+bangla_dictionary/
+├── bangla_dictionary/
 │   ├── __init__.py
-│   ├── banglaDictionary.py
+│   ├── dictionary.py
 ├── data/
 │   │   ├── bangla_dictionary_pkl
 ├── scripts/
@@ -38,7 +38,6 @@ dictionary/
 ├── setup.py
 ├── README.md
 └── requirements.txt
-├── todo.txt
 ```
 
 
@@ -48,14 +47,13 @@ Here's an example of how to use the BanglaDictionary package:
 
 ```python
 # Create an instance of the BanglaDictionary
-from dictionary.banglaDictionary import BanglaDictionary
+from bangla_dictionary.dictionary import BanglaDictionary
 
 bd = BanglaDictionary()
 
 # Get the meaning of a word
 meaning = bd.get_meaning("অই")
-print(
-    meaning)  # Output: {"২": ["পদ্যে ছন্দের খাতিরে নির্দেশক স্বরবর্ণ 'ঐ' কখনো কখনো 'অই' রুপে ব্যবহৃত হয়", "স্মরণ সম্বোধন ও আক্ষেপাদি সূচক"], "১": ["অদূরে বা সম্মুখবর্তী কোনো কিছু নির্দেশে ", "নির্দিষ্ট", "উল্লিখিত", "সেই"]}
+print(meaning)  # Output: {"২": ["পদ্যে ছন্দের খাতিরে নির্দেশক স্বরবর্ণ 'ঐ' কখনো কখনো 'অই' রুপে ব্যবহৃত হয়", "স্মরণ সম্বোধন ও আক্ষেপাদি সূচক"], "১": ["অদূরে বা সম্মুখবর্তী কোনো কিছু নির্দেশে ", "নির্দিষ্ট", "উল্লিখিত", "সেই"]}
 
 # Get the pronunciation of a word
 pronunciation = bd.get_pronunciation("অংগুষ্ঠানা")
@@ -81,13 +79,12 @@ print(source)  # Output: "ব্যবহারিক বাংলা অভি�
 
 ```python
 # Get multiple meanings
-from dictionary.banglaDictionary import BanglaDictionary
+from bangla_dictionary.dictionary import BanglaDictionary
 
 bd = BanglaDictionary()
 
 meanings = bd.get_multiple_meanings("অংশভাগী", "অংশল", "অংশহারী")
-print(
-    meanings)  # Output: {'অংশভাগী': '{"১": ["অংশ পাওয়ার যোগ্য", "অংশীদার"]}', 'অংশল': '{"১": ["বলবান", "বলশালী"]}', 'অংশহারী': '{"১": ["অংশলোপ", "অপহরণ করে এমন"], "২": ["অংশগ্রহণকারী"]}'}
+print(meanings)  # Output: {'অংশভাগী': '{"১": ["অংশ পাওয়ার যোগ্য", "অংশীদার"]}', 'অংশল': '{"১": ["বলবান", "বলশালী"]}', 'অংশহারী': '{"১": ["অংশলোপ", "অপহরণ করে এমন"], "২": ["অংশগ্রহণকারী"]}'}
 
 # Get multiple pronunciations
 pronunciations = bd.get_multiple_pronunciations("অংশহারী", "অংশাংশ", "অংশানো")

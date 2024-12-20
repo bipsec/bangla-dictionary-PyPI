@@ -70,30 +70,30 @@ with codecs.open(os.path.join(here, "README.md"), encoding="utf-8") as fh:
 
 # Setting up the package
 setup(
-    name="banglaDictionary",
-    version="0.1",
+    name="bangla-dictionary",
+    version="0.3",
     author="Biplab Kumar Sarkar, Afrar Jahin, Tanveer Azmal, Asif Shusmit",
     author_email="bip.sec22@gmail.com",
     description="A Complete Bangla Dictionary PyPI Module.",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    package_dir={"": "dictionary"},
-    packages=find_packages(where=['dictionary', 'dictionary.*']),
+    package_dir={"": "bangla_dictionary"},
+    packages=find_packages(where=['bangla_dictionary', 'bangla_dictionary.*']),
     url="https://github.com/bipsec/bangla-dictionary",
     license="MIT",
-    install_requires=requirements,  # Install dependencies
+    install_requires=requirements,
     include_package_data=True,
     keywords=[
-        "python", "online dictionary", "bangla dictionary",
-        "bengali dictionary", "bangla_dict", "corpus dictionary", "bangla corpus"
+        "python", "online bangla_dictionary", "bangla bangla_dictionary",
+        "bengali bangla_dictionary", "bangla_dict", "corpus bangla_dictionary", "bangla corpus"
     ],
     classifiers=[
-        "Development Status :: 1 - Planning",  # Update as appropriate
+        "Development Status :: 1 - Planning",
         "Intended Audience :: Developers",
         "Programming Language :: Python :: 3",
         "Operating System :: Unix",
         "Operating System :: MacOS :: MacOS X",
         "Operating System :: Microsoft :: Windows",
     ],
-    python_requires=">=3.6",  # Specify minimum Python version
+    python_requires=">=3.6",
 )

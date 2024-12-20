@@ -1,5 +1,4 @@
 import pathlib
-
 import pandas as pd
 
 dictionary_data = pathlib.Path(__file__).absolute().parents[2] / "data/bang_dict.xlsx"
@@ -78,8 +77,8 @@ def do(data):
     #
     # dataframe.columns = new_column_names
     df = fill_null_with_previous_word(df=dataframe)
-    df.to_csv("dictionary/data/dictionary.csv", index=False)
-    df.to_pickle("dictionary/data/bangla_dictionary_pkl")
+    df.to_csv("bangla_dictionary/data/bangla_dictionary.csv", index=False)
+    df.to_pickle("bangla_dictionary/data/bangla_dictionary_pkl")
     print("Bangla Dictionary CSV Files and Pickle Files are saved successfully.")
 
 # Testing functions
