@@ -11,6 +11,10 @@ You can install the BanglaDictionary package using pip:
 pip install bangla-dictionary
 ```
 
+```url
+https://pypi.org/project/bangla-dictionary/
+```
+
 ## File Structure
 ```sh
 bangla_dictionary/
